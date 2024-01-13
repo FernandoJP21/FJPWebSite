@@ -39,19 +39,23 @@ $(document).ready(function () {
         }, ]
     });
 
-    function updateCounter() {
+    function updateCounter(elementId) {
         const startDate = new Date('2024-01-12');
         const currentDate = new Date();
 
         const timeDifference = currentDate - startDate;
         const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-        document.getElementById('counter').innerText = `Hace ${daysDifference} día(s) por Fernando`;
+        document.getElementById(elementId).innerText = `Hace ${daysDifference} día(s) por Fernando`;
     }
 
-    // Update the counter every second (1000 milliseconds)
-    setInterval(updateCounter, 1000);
+    setInterval(() => {
+        updateCounter('counter1');
+        updateCounter('counter2');
+        updateCounter('counter3');
+    }, 1000);
 
-    // Initial update
-    updateCounter();
+    updateCounter('counter1');
+    updateCounter('counter2');
+    updateCounter('counter3');
 });
