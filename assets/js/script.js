@@ -40,7 +40,7 @@ $(document).ready(function () {
     });
 
     function updateCounter(elementId) {
-        const startDate = new Date('2024-01-12');
+        const startDate = new Date('2024-07-19');
         const currentDate = new Date();
 
         const timeDifference = currentDate - startDate;
@@ -53,9 +53,11 @@ $(document).ready(function () {
         updateCounter('counter1');
         updateCounter('counter2');
         updateCounter('counter3');
+        updateCounter('counter4');
     }, 1000);
 
     updateCounter('counter1');
     updateCounter('counter2');
     updateCounter('counter3');
+    updateCounter('counter4');
 });
